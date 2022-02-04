@@ -53,4 +53,50 @@ Enfin on va à l'adresse `http://localhost:5601/`
 
 On reprend le meme principe que les ligne de commande et on configure le fichier `docker-compose.yml`
 
-> Cette partie n'a pas encore été tester car il y a un pb avec easticsearch lors du run qui s'arrete et laisse kibana atteindre
+Liste des commande utilie pour lancer elasticsearch :
+
+```bash
+$ docker compose up
+$ docker compose down
+$ docker compose ps
+$ docker compose kill <container_name>
+```
+
+Liste complete de la doc :
+
+```
+Commands:
+  build       Build or rebuild services
+  convert     Converts the compose file to platform's canonical format
+  cp          Copy files/folders between a service container and the local filesystem
+  create      Creates containers for a service.
+  down        Stop and remove containers, networks
+  events      Receive real time events from containers.
+  exec        Execute a command in a running container.
+  images      List images used by the created containers
+  kill        Force stop service containers.
+  logs        View output from containers
+  ls          List running compose projects
+  pause       Pause services
+  port        Print the public port for a port binding.
+  ps          List containers
+  pull        Pull service images
+  push        Push service images
+  restart     Restart containers
+  rm          Removes stopped service containers
+  run         Run a one-off command on a service.
+  start       Start services
+  stop        Stop services
+  top         Display the running processes
+  unpause     Unpause services
+  up          Create and start containers
+  version     Show the Docker Compose version information
+```
+
+Une fois le container up , se connecter à _localhost:5601_
+
+> en cas d'erreur de taille entrer la commande
+
+```bash
+$  sudo sysctl -w vm.max_map_count=262144
+```
